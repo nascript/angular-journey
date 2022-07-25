@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { AdminComponent } from './admin/admin.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RouterModule, Routes } from '@angular/router'
+import { MatToolbar } from '@angular/material/toolbar'
+import { MaterialDesign } from '../material/material'
 
 // route by component
 const routes: Routes = [
@@ -21,11 +23,13 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AdminComponent,
-    DashboardComponent
+    DashboardComponent,
+    
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    MaterialDesign
   ]
 })
 export class AdminModule { }
