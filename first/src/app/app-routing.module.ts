@@ -12,6 +12,16 @@ const routes: Routes = [
     path: 'register',
     component: RegisterComponent,
   },
+  // nge route ke halaman child dari folder
+  {
+    path: 'admin',
+    loadChildren: () => import('./admin/admin.module').then((mod) => mod.AdminModule)
+  },
+  // nge route ke halaman child dari folder
+  {
+    path: 'public',
+    loadChildren: () => import('./public/public.module').then((mod) => mod.PublicModule)
+  },
   // dibawah ini adalah halaman default
   {
     path: '',
